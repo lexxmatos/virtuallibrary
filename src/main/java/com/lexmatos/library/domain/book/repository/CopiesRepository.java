@@ -12,4 +12,10 @@ public interface CopiesRepository extends JpaRepository <Copies, Long>{
 	
 	@Query("select c from Copies c where c.book.id = ?1")
 	List<Copies> findByBookId (Long idBook);
+	
+	@Query("select c from Copies c where c.book.id = ?1 and c.action='R'")
+	List<Copies> findByAvailabilityBookId (Long idBook);	
+	
+	@Query("select c from Copies c where c.book.id = ?1 and c.action='S'")
+	List<Copies> findByNotAvailabilityBookId (Long idBook);		
 }

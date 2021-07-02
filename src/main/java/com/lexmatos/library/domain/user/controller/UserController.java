@@ -1,4 +1,4 @@
-package com.lexmatos.library.domain.user.application;
+package com.lexmatos.library.domain.user.controller;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
-@RequestMapping(value = "/users")
+@RequestMapping(value = "/restusers")
 public class UserController {
 
 

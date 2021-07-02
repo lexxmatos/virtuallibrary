@@ -27,9 +27,6 @@ public class Copies {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-	@Enumerated(EnumType.STRING) 
-	private YesOuFalse available;
-	
 	@Enumerated(EnumType.STRING)
 	private Action action;
 	

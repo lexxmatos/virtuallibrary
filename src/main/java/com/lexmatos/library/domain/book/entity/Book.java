@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.lexmatos.library.domain.book.enums.CategoryType;
 import com.lexmatos.library.domain.book.enums.YesOuFalse;
 
 import lombok.AllArgsConstructor;
@@ -24,8 +25,7 @@ public class Book {
     private Long id;
     
 	private String title;
-	private String category;
 	
-	@Enumerated(EnumType.STRING) 
-	private YesOuFalse remove;
+	@Enumerated(EnumType.STRING)
+	private CategoryType category;
 }

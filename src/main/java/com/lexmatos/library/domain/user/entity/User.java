@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Id;
 
 import com.lexmatos.library.domain.user.enums.Action;
+import com.lexmatos.library.domain.user.enums.Profile;
 
 import java.sql.Date;
 
@@ -30,7 +31,10 @@ public class User {
     
     private String email;
     
-    private Date date;
+    @Enumerated(EnumType.STRING)
+    private Profile profile;
+    
+    private Date date; // data de criação.
     	
     @Enumerated(EnumType.STRING) 
     private Action action;
